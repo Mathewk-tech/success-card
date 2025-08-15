@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KCSE Exam Good Luck Card</title>
   <style>
-    body {
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #fceabb, #f8b500);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      overflow: hidden; /* hide body scroll, card will scroll */
     }
 
+    body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Sunset gradient background */
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 50%, #f9735a 75%, #bc4e9c 100%);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+
     .card {
-      background-color: #fff;
-      padding: 40px 50px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      max-width: 400px;
-      animation: fadeInScale 0.8s ease;
-      position: relative;
-    }
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  max-width: 450px;
+  max-height: 95vh; /* increased from 90vh */
+  min-height: 600px; /* added min height to ensure bigger size */
+  padding: 40px 50px; /* slightly increased padding for better spacing */
+  overflow-y: auto;
+  position: relative;
+  animation: fadeInScale 0.8s ease;
+  color: #4a2c00;
+  text-align: center;
+}
+
 
     .card::before {
       content: "🎉";
@@ -45,66 +67,77 @@
     }
 
     .card h1 {
-      color: #4CAF50;
+      color: #b34700;
       font-size: 28px;
       margin-bottom: 10px;
     }
 
     .card p {
-      color: #333;
-      font-size: 18px;
-      margin-bottom: 20px;
+      color: #5c3a00;
+      font-size: 16px;
       line-height: 1.6;
+      margin-bottom: 1em;
+      text-align: left;
     }
 
     .card .emoji {
       font-size: 50px;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .card .quote {
       font-style: italic;
-      color: #555;
+      color: #7a4b00;
       font-size: 16px;
       margin: 15px 0;
       padding-left: 10px;
-      border-left: 4px solid #c8e6c9;
+      border-left: 4px solid #fda085;
+      text-align: left;
     }
 
     .card .button {
-      background-color: #4CAF50;
-      color: #fff;
+      background-color: #b34700;
+      color: white;
       padding: 12px 24px;
-      font-size: 16px;
-      border: none;
       border-radius: 8px;
+      border: none;
       cursor: pointer;
-      transition: background 0.3s ease;
+      font-size: 16px;
       text-decoration: none;
       display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s ease;
     }
 
     .card .button:hover {
-      background-color: #388e3c;
+      background-color: #802900;
     }
 
     @keyframes fadeInScale {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    a {
+      color: #7a3e00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .card {
+        max-width: 90vw;
+        padding: 20px;
       }
     }
   </style>
@@ -115,60 +148,62 @@
     <div class="emoji">📚✨</div>
     <h1>YOU ARE READY. YOU ARE ENOUGH.!</h1>
     <p>
-      This moment is here, and so are you.
-      Not by luck, not by chance,
-      but by the steps you took, the nights you sacrificed,
-      the fears you faced, and the strength you built.
+      This moment is here, and so are you.<br>
+      Not by luck, not by chance,<br>
+      but by the steps you took, the nights you sacrificed,<br>
+      the fears you faced, and the strength you built.<br><br>
 
-      Don’t hurry. Don’t fight the silence inside.
-      Breathe deep.
-      Feel your heart steady like the earth beneath your feet.
+      Don’t hurry. Don’t fight the silence inside.<br>
+      Breathe deep.<br>
+      Feel your heart steady like the earth beneath your feet.<br><br>
 
-      You are more than this test.
-      You are the stories you’ve lived,
-      the dreams you carry,
-      the courage that never left.
+      You are more than this test.<br>
+      You are the stories you’ve lived,<br>
+      the dreams you carry,<br>
+      the courage that never left.<br><br>
 
-      Like bamboo, you bend—but do not break.
-      This exam is just a stone in your river;
-      you are the flowing, unstoppable current.
+      Like bamboo, you bend—but do not break.<br>
+      This exam is just a stone in your river;<br>
+      you are the flowing, unstoppable current.<br><br>
 
-      When doubt tries to hold you back,
-      think of the leader who said:
-      “To stand when it’s hard, that is victory.”
-      Hold that courage tight.
+      When doubt tries to hold you back,<br>
+      think of the leader who said:<br>
+      “To stand when it’s hard, that is victory.”<br>
+      Hold that courage tight.<br><br>
 
-      Have unwavering confidence.
-      Every answer you write, every effort you make,
-      belongs in the battle plan.
-      Your preparation is your strategy.
-      Trust in yourself.
-      Victory follows those who believe in their cause.
+      Have unwavering confidence.<br>
+      Every answer you write, every effort you make,<br>
+      belongs in the battle plan.<br>
+      Your preparation is your strategy.<br>
+      Trust in yourself.<br>
+      Victory follows those who believe in their cause.<br><br>
 
-      Go not with fear,
-      but with the quiet power of someone who knows:
-      They are ready. They are enough.
+      Go not with fear,<br>
+      but with the quiet power of someone who knows:<br>
+      They are ready. They are enough.<br><br>
 
-      Your light will not be dimmed.
-      Do your best.
-      And maybe—just maybe—
-      your best will be all that is needed.
+      Your light will not be dimmed.<br>
+      Do your best.<br>
+      And maybe—just maybe—<br>
+      your best will be all that is needed.<br><br>
 
-      It’s you vs you.
-      Don’t compete with others.
-      Don’t compare.
-      True growth begins when you stop comparing
+      It’s you vs you.<br>
+      Don’t compete with others.<br>
+      Don’t compare.<br>
+      True growth begins when you stop comparing<br>
       and start evolving.
     </p>
-    <P>watch this when you are chilling</P>
-<a href="https://youtu.be/L2qKbWWbeGo">Watch this if you can</a><br>
-<a href="https://youtu.be/mgmVOuLgFB0">This too</a>
+
+    <p><strong>🎧 Click this two when you're chilling:</strong></p>
+    <a href="https://youtu.be/L2qKbWWbeGo" target="_blank">Click here</a><br>
+    <a href="https://youtu.be/mgmVOuLgFB0" target="_blank">This too</a>
+
     <div class="quote">
       “The path to who you are destined to become… begins only when you choose to try.”
     </div>
 
     <div class="quote">
-       "Lets do this! "
+      "Let's do this!"
     </div>
 
     <a href="#" class="button">You’ve Got This 💖</a>
